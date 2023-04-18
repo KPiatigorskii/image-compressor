@@ -15,10 +15,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                dir('app') {
-                    withMaven{
-                        sh "mvn install"
-                    }
+                withMaven{
+                    sh "mvn install"
                 }
             }
         }
